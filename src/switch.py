@@ -8,7 +8,6 @@ from viam.resource.base import ResourceBase
 from viam.resource.types import Model, ModelFamily
 from viam.components.generic import Generic
 from viam.logging import getLogger
-from dotenv import load_dotenv
 from kasa import SmartPlug
 from kasa import Discover
 
@@ -151,11 +150,3 @@ class switch(Generic, Reconfigurable):
         LOGGER.info('Turning On.')
         return await self.toggle_on()
     
-# Anything below this line is optional, but may come in handy for debugging and testing.
-async def main():
-    found_devices = await Discover.discover()
-    print(found_devices)
-    print(type(found_devices))
-
-if __name__ == '__main__':
-    asyncio.run(main())
