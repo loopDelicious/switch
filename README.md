@@ -1,65 +1,34 @@
-# switch modular service
+# Kasa smart plug
 
-This module implements the [rdk generic API](https://github.com/rdk/generic-api) in a joyce:kasa:switch model.
-With this model, you can...
+This module implements the [rdk generic API](https://github.com/rdk/generic-api) in a `joyce:kasa:switch` model.
 
-## Requirements
-
-_Add instructions here for any requirements._
-
-``` bash
-```
+With this model, you can manage a Kasa smart plug:
+- turn on
+- turn off
+- toggle
 
 ## Build and Run
 
-To use this module, follow these instructions to [add a module from the Viam Registry](https://docs.viam.com/registry/configure/#add-a-modular-resource-from-the-viam-registry) and select the `rdk:generic:joyce:kasa:switch` model from the [`joyce:kasa:switch` module](https://app.viam.com/module/rdk/joyce:kasa:switch).
+To use this module, follow these instructions to [add a module from the Viam Registry](https://docs.viam.com/registry/configure/#add-a-modular-resource-from-the-viam-registry) and select the `joyce:kasa:switch` model from the [`kasasmartplug` module]([https://app.viam.com/module/rdk/joyce:kasa:switch](https://app.viam.com/module/joyce/kasasmartplug)).
 
-## Configure your generic
+## Configure your generic switch
 
 > [!NOTE]  
-> Before configuring your generic, you must [create a machine](https://docs.viam.com/manage/fleet/machines/#add-a-new-machine).
+> Before configuring your generic component, you must [create a machine](https://docs.viam.com/manage/fleet/machines/#add-a-new-machine).
 
-Navigate to the **Config** tab of your robot’s page in [the Viam app](https://app.viam.com/).
+Navigate to the **CONFIGURE** tab of your robot’s page in [the Viam app](https://app.viam.com/).
 Click on the **Components** subtab and click **Create component**.
-Select the `generic` type, then select the `joyce:kasa:switch` model. 
-Enter a name for your generic and click **Create**.
+Select the `generic` type, then select the `kasa:switch` model. 
+Enter a name for your generic component and click **Create**.
 
-On the new component panel, copy and paste the following attribute template into your generic’s **Attributes** box:
+On the new component panel, copy and paste the following configuration template into your generic component’s **CONFIGURE** box, updating with your own connected smart plug's IP address.
 
 ```json
 {
-  TODO: INSERT SAMPLE ATTRIBUTES
+  "plug_ip": "192.168.1.169"
 }
 ```
 
 > [!NOTE]  
 > For more information, see [Configure a Robot](https://docs.viam.com/manage/configuration/).
 
-### Attributes
-
-The following attributes are available for `rdk:generic:joyce:kasa:switch` generics:
-
-| Name | Type | Inclusion | Description |
-| ---- | ---- | --------- | ----------- |
-| `todo1` | string | **Required** |  TODO |
-| `todo2` | string | Optional |  TODO |
-
-### Example Configuration
-
-```json
-{
-  TODO: INSERT SAMPLE CONFIGURATION(S)
-}
-```
-
-### Next Steps
-
-_Add any additional information you want readers to know and direct them towards what to do next with this module._
-_For example:_ 
-
-- To test your...
-- To write code against your...
-
-## Troubleshooting
-
-_Add troubleshooting notes here._
