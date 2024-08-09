@@ -1,0 +1,14 @@
+{
+  "$schema": "https://dl.viam.dev/module.schema.json",
+  "module_id": "joyce:kasasmartplug",
+  "visibility": "public",
+  "url": "https://github.com/loopDelicious/switch",
+  "description": "Turn on, turn off, and toggle the Kasa Smart Plug",
+  "models": [
+    {
+      "api": "rdk:component:generic",
+      "model": "joyce:kasa:switch"
+    }
+  ],
+  "entrypoint": "run.sh"
+}
