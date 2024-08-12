@@ -20,15 +20,17 @@ To use this module, follow these instructions to [add a module from the Viam Reg
 - Click on the **Components** subtab and click **Create component**.
 - Select the `generic` type, then select the `kasa:switch` model. 
 - Enter a name for your generic component and click **Create**.
+- From the command line, you can use the `python-kasa` command [`kasa discover`](https://python-kasa.readthedocs.io/en/latest/cli.html#discovery) to  locate the IP address of the connected device. 
+- On the new component panel, copy and paste the following configuration template into your generic component’s **CONFIGURE** box, updating with your own connected smart plug's IP address.
 
-On the new component panel, copy and paste the following configuration template into your generic component’s **CONFIGURE** box, updating with your own connected smart plug's IP address.
-
-```json
-{
-  "plug_ip": "192.168.1.169"
-}
-```
+  ```json
+  {
+    "plug_ip": "192.168.1.169"
+  }
+  ```
 
 > [!NOTE]  
 > For more information, see [Configure a Robot](https://docs.viam.com/manage/configuration/).
 
+**Related modules**
+- [`kasa-smartplug-visionswitch`](https://app.viam.com/module/bill/kasa-smartplug-visionswitch) to turn on or off depending on if the vision detection is seen or not
