@@ -16,10 +16,10 @@ To use this module, follow these instructions to [add a module from the Viam Reg
 > [!NOTE]  
 > Before configuring your generic component, you must [create a machine](https://docs.viam.com/manage/fleet/machines/#add-a-new-machine).
 
-Navigate to the **CONFIGURE** tab of your robot’s page in [the Viam app](https://app.viam.com/).
-Click on the **Components** subtab and click **Create component**.
-Select the `generic` type, then select the `kasa:switch` model. 
-Enter a name for your generic component and click **Create**.
+- Navigate to the **CONFIGURE** tab of your robot’s page in [the Viam app](https://app.viam.com/).
+- Click on the **Components** subtab and click **Create component**.
+- Select the `generic` type, then select the `kasa:switch` model. 
+- Enter a name for your generic component and click **Create**.
 
 On the new component panel, copy and paste the following configuration template into your generic component’s **CONFIGURE** box, updating with your own connected smart plug's IP address.
 
