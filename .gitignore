@@ -7,3 +7,5 @@ viam-env/
 /lib64
 /share
 pyvenv.cfg
+.installed
+module.tar.gz
