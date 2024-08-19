@@ -3,9 +3,9 @@
 This module implements the [rdk generic API](https://github.com/rdk/generic-api) in a `joyce:kasa:switch` model.
 
 With this model, you can manage a Kasa smart plug:
-- turn on
-- turn off
-- toggle
+- toggle on
+- toggle off
+- toggle switch
 
 ## Build and Run
 
@@ -31,6 +31,16 @@ To use this module, follow these instructions to [add a module from the Viam Reg
 
 > [!NOTE]  
 > For more information, see [Configure a Robot](https://docs.viam.com/manage/configuration/).
+
+### Do command
+
+On the **CONTROL** tab, find `DoCommand()`, select your Kasa component, and use the following commands as a key with an empty array as the value, and **Execute** with [`DoCommand`](https://docs.viam.com/components/generic/#docommand).
+
+- `toggle_on`
+- `toggle_off`
+- `toggle_switch`
+
+- ![do command](./doCommand.png)
 
 **Related modules**
 - [`kasa-smartplug-visionswitch`](https://app.viam.com/module/bill/kasa-smartplug-visionswitch) to turn on or off depending on if the vision detection is seen or not
