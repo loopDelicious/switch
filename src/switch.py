@@ -114,6 +114,16 @@ class switch(Generic, Reconfigurable):
                 except Exception as e:
                     result["toggle_off"] = f"Unexpected Error: {str(e)}"
 
+            if name == "discover_kasa_devices":
+                await self.plug.update()
+                try:
+                    device_dict = await self.discover_kasa_devices()
+                    result["discover_kasa_devices"] = device_dict
+                except TypeError as e:
+                    result["discover_kasa_devices"] = f"TypeError: {str(e)}"
+                except Exception as e:
+                    result["discover_kasa_devices"] = f"Unexpected Error: {str(e)}"
+
         return result 
     
     async def toggle_on(self):
