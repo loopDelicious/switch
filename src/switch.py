@@ -16,16 +16,10 @@ import asyncio
 LOGGER = getLogger(__name__)
 
 class switch(Generic, Reconfigurable):
-    
-    """
-    Generic component, which represents any type of component that can executes arbitrary commands
-    """
 
     MODEL: ClassVar[Model] = Model(ModelFamily("joyce", "kasa"), "switch")
-
-    # create any class parameters here, 'some_pin' is used as an example (change/add as needed)
-    some_pin: int
-
+    plug: SmartPlug
+    
     # Constructor
     @classmethod
     def new(cls, config: ComponentConfig, dependencies: Mapping[ResourceName, ResourceBase]) -> Self:
@@ -51,12 +45,6 @@ class switch(Generic, Reconfigurable):
 
         plug_ip = config.attributes.fields["plug_ip"].string_value
         self.plug = SmartPlug(plug_ip)
-
-        if config.attributes.fields["default_state"].string_value.lower() == "on" or config.attributes.fields["default_state"].string_value.lower() == "off":
-            default_state = config.attributes.fields["default_state"].string_value.lower()
-            self.default_state = default_state
-        else:
-            self.default_state = "on"
 
         return
 
