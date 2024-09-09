@@ -34,7 +34,7 @@ To use this module, follow these instructions to [add a module from the Viam Reg
 
 ### Do command
 
-On the **CONTROL** tab, find `DoCommand()`, select your Kasa component, and use the key command as a key and of of the following as the value, and **Execute** with [`DoCommand`](https://docs.viam.com/components/generic/#docommand).
+On the **CONTROL** tab, find `DoCommand()`, select your Kasa component, and use the key *command* and one of the following as the value, and **Execute** with [`DoCommand`](https://docs.viam.com/components/generic/#docommand).
 
 - `toggle_on`
 - `toggle_off`
