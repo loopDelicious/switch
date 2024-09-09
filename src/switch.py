@@ -71,7 +71,8 @@ class switch(Generic, Reconfigurable):
                 **kwargs
             ):
         result = {}
-        for name, args in command.items():
+        if 'command' in command:
+            name = command['command']
             if name == "toggle_switch":
                 await self.plug.update()
                 try:
